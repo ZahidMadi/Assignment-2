@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Car {
+            constructor(name, make, color, speed) {
+                this.name = name;
+                this.make = make;
+                this.color = color;
+                this.speed = speed;
+            }
+
+            setName(name) {
+                name = this.name;
+                return this;
+            }
+            setMake(make) {
+                make = this.make;
+                return this;
+            }
+            setColor(color) {
+                color = this.color;
+                return this;
+            }
+            setSpeed(speed) {
+                speed = this.speed;
+                return this;
+            }
+            print() {
+                console.log(this.name, this.make, this.color, this.speed)
+            }
+        }
+
+        var obj1 = new Car("Cultus", "Suzuki", "White", 200)
+        obj1.setName().setMake().setColor().setSpeed().print();
+
+    </script>
+</body>
+
+</html>

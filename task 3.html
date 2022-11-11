@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var library = [
+    {
+        author: "Bill Gates",
+        title: "The Road Ahead",
+        readingStatus: true
+    },
+    {
+        author: "Steve Jobs",
+        title: "Waiter Isaacson",
+        readingStatus: true
+    },
+    {
+        author: "Suzanne Collins",
+        title: "Mockingjay: The final Book of the Hunger Game",
+        readingStatus: false
+    },
+];
+
+//add new object in an array
+let data = {
+    author: "Bill Gates",
+    title: "The Road Ahead",
+    readingStatus: true
+  }
+function display () {
+    for( i=0; i<library.length; i++)
+    {
+
+        if(library[i].author==data.author && library[i].title==data.title)
+        {
+            console.log(library[i].readingStatus);
+            break;
+        }
+        else
+        console.log("nott found");
+    }
+
+}
+
+display();
+
+    </script>    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let totalRuns = 0;
+
+        class Player {
+            constructor(PlayerID, PlayerName, PlayerRun, PlayerDOB, PlayerShName) {
+                this.PlayerID = PlayerID;
+                this.PlayerName = PlayerName;
+                this.PlayerRun = PlayerRun;
+                this.PlayerDOB = PlayerDOB;
+                this.PlayerShName = PlayerShName;
+            }
+            DisplayInfo() {
+                console.log("Player id " + this.PlayerID + " have name is " + this.PlayerName + " make runs   " + this.PlayerRun + " have date of birth " + this.PlayerDOB + " player shirt name " + this.PlayerShName);
+            }
+
+            GetRuns() {
+                console.log("Get Runs is :" + this.PlayerRun);
+            }
+
+            AddRuns() {
+                totalRuns = totalRuns + this.PlayerRun;
+                console.log("Total Runs of the player is :" + totalRuns);
+            }
+        }
+
+        let splayer = new Player(1, 'Zahid', 120, 1998, 10);
+        let splayer1 = new Player(2, 'Mehmood', 150, 1999, 13);
+        splayer.DisplayInfo();
+        splayer.GetRuns();
+        splayer1.DisplayInfo();
+        splayer.AddRuns();
+        splayer1.AddRuns();
+
+    </script>
+</body>
+
+</html>

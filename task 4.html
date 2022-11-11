@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Account {
+            #accountId
+            #accountTitle
+            #balance
+            #emailId
+            constructor(accountId, accountTitle, balance, emailId) {
+                this.#accountId = accountId;
+                this.#accountTitle = accountTitle;
+                this.#balance = balance;
+                this.#emailId = emailId;
+            }
+            set AccountId(accountId) {
+                this.#accountId = accountId;
+            }
+            get AccountId() {
+                return this.#accountId
+            }
+            set AccountTitle(accountTitle) {
+                this.#accountTitle = accountTitle;
+            }
+            get AccountTitle() {
+                return this.#accountTitle
+            }
+            set balance(balance) {
+                this.#balance = balance;
+            }
+            get balance() {
+                return this.#balance
+            }
+            set emailId(emailID) {
+                this.#emailId = emailID;
+            }
+            get emailId() {
+                return this.#emailId
+            }
+            depositAmount(amount) {
+                console.log(`New amount is ${amount}`);
+            }
+            withDrawAmount(amount, balance) {
+                console.log(`The withdrwal amount is ${amount} and the remaining blance is ${balance - amount}`);
+            }
+        }
+        const newBank = new Account('Haris');
+        newBank.depositAmount(10000);
+        newBank.withDrawAmount(5000, 10000);
+        newBank.AccountId = '0237';
+        console.log("Your account id is:" + newBank.AccountId);
+
+    </script>
+</body>
+
+</html>

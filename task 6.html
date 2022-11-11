@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Employee {
+            #salary
+            #nohpd
+            constructor(salary, nohpd) {
+                this.#salary = salary;
+                this.nohpd = nohpd;
+            }
+
+            set salary(sal) {
+                this.#salary = sal;
+            }
+            get salary() {
+                return this.#salary;
+            }
+            set nohpd(noh) {
+                this.#nohpd = noh;
+            }
+            get nohpd() {
+                return this.#nohpd;
+            }
+            getInfo() {
+                console.log("Salary is" + obj1.salary + "and no of hours per day is:" + obj1.nohpd);
+            }
+            AddSal() {
+                if (obj1.salary < 500) {
+                    obj1.salary = obj1.salary + 10;
+                }
+            }
+            AddWork() {
+                if (obj1.nohpd > 6) {
+                    obj1.salary = obj1.salary + 5;
+                }
+            }
+            print() {
+                console.log("Your total salary is:" + obj1.salary);
+            }
+        }
+
+        var obj1 = new Employee;
+        obj1.salary = 600;
+        obj1.nohpd = 4;
+        obj1.AddSal();
+        obj1.AddWork();
+        obj1.print();
+
+    </script>
+</body>
+
+</html>
